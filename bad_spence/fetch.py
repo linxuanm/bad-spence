@@ -7,4 +7,11 @@ def fetch_citation(link):
     }
 
     resp = requests.get(link, headers=headers)
-    html = resp.text
+    if resp.status_code != 200:
+        raise ValueError(
+            f'bad request when handling {link}: code {resp.status_code}'
+        )
+
+    return resp.text
+
+fetch_citation('https://doi.org/10.48550/arXiv.1910.00935')
