@@ -2,6 +2,14 @@
 
 A citation generator from digital object identifier.
 
+## Installation
+
+Install with pip:
+
+```sh
+pip install bad-spence
+```
+
 ## Usage
 
 ```sh
