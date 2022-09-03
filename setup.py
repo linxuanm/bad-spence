@@ -17,7 +17,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     entry_points={
-        'console_scripts': ['spence=spence.generator:main']
+        'console_scripts': ['spence=bad_spence.generator:main']
     },
     install_requires=[
         'requests'
