@@ -20,6 +20,6 @@ setup(
         'console_scripts': ['spence=bad_spence.generator:main']
     },
     install_requires=[
-        'requests'
+        'requests', 'pqdm'
     ]
 )
