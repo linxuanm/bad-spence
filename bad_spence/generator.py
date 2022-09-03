@@ -1,5 +1,6 @@
-import requests
 import argparse
+
+from .fetch import fetch_citation
 
 
 def main():
@@ -26,4 +27,14 @@ def main():
     with open(file, 'r') as f:
         srcs = f.readlines()
 
+    links = []
+    for src in srcs:
+        link = src.strip()
+        if not link: continue
 
+        if not link.startswith('10'):
+            raise ValueError(
+                f'{link} does not begin with "10" (format not yet supported)'
+            )
+
+        links.append(f'https://doi.org/{link}')
